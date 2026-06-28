@@ -1,0 +1,369 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #222;
+}
+
+/* Auth Page */
+.auth-body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0d6efd, #6610f2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.auth-container {
+    width: 100%;
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+}
+
+.auth-info {
+    background: #07111f;
+    color: white;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.auth-info h1 {
+    color: #ffb703;
+    font-size: 55px;
+    margin-bottom: 20px;
+}
+
+.auth-info p {
+    color: #d1d5db;
+    font-size: 19px;
+    line-height: 1.7;
+}
+
+.auth-box {
+    padding: 35px;
+}
+
+.auth-box h2 {
+    color: #0d6efd;
+    margin-bottom: 15px;
+}
+
+.auth-box input {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.auth-box button,
+.sidebar button,
+.task-form-box button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    background: #0d6efd;
+    color: white;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.auth-box button:hover,
+.sidebar button:hover,
+.task-form-box button:hover {
+    background: #084298;
+}
+
+.line {
+    text-align: center;
+    margin: 25px 0;
+    color: #777;
+    font-weight: bold;
+}
+
+/* Dashboard */
+.topbar {
+    background: #07111f;
+    color: white;
+    padding: 18px 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topbar h2 {
+    color: #ffb703;
+}
+
+.topbar p {
+    color: #cbd5e1;
+    margin-top: 4px;
+}
+
+.user-box {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.user-box button,
+.delete-project {
+    padding: 10px 16px;
+    border: none;
+    background: #dc3545;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    min-height: calc(100vh - 78px);
+}
+
+.sidebar {
+    background: white;
+    padding: 25px;
+    border-right: 1px solid #ddd;
+}
+
+.sidebar h3 {
+    color: #0d6efd;
+    margin-bottom: 15px;
+}
+
+.sidebar input,
+.sidebar textarea,
+.task-form-box input,
+.task-form-box textarea,
+.task-form-box select {
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.sidebar textarea,
+.task-form-box textarea {
+    height: 85px;
+    resize: none;
+}
+
+.mt {
+    margin-top: 30px;
+}
+
+.project-item {
+    background: #f1f5f9;
+    padding: 14px;
+    border-radius: 12px;
+    border-left: 4px solid #0d6efd;
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+
+.project-item:hover,
+.project-item.active {
+    background: #0d6efd;
+    color: white;
+}
+
+.project-item p {
+    margin-top: 6px;
+    font-size: 14px;
+}
+
+.content {
+    padding: 28px;
+}
+
+.project-header,
+.task-form-box {
+    background: white;
+    padding: 22px;
+    border-radius: 16px;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+    margin-bottom: 22px;
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    align-items: center;
+}
+
+.project-header h2 {
+    color: #0d6efd;
+    margin-bottom: 6px;
+}
+
+.hide {
+    display: none;
+}
+
+/* Kanban Board */
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.column {
+    background: #eaf3ff;
+    padding: 16px;
+    border-radius: 16px;
+    min-height: 350px;
+}
+
+.column h3 {
+    text-align: center;
+    color: #0d6efd;
+    margin-bottom: 16px;
+}
+
+.task-card {
+    background: white;
+    padding: 16px;
+    border-radius: 14px;
+    margin-bottom: 14px;
+    box-shadow: 0 5px 14px rgba(0,0,0,0.08);
+}
+
+.task-card h4 {
+    margin-bottom: 8px;
+}
+
+.task-card p {
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.task-card select,
+.task-card input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 9px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.task-card button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 8px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+}
+
+.update-btn {
+    background: #0d6efd;
+}
+
+.comment-btn {
+    background: #198754;
+}
+
+.delete-btn {
+    background: #dc3545;
+}
+
+.comments {
+    background: #f8fafc;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 8px;
+}
+
+.comments small {
+    display: block;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+/* Toast */
+#toast {
+    position: fixed;
+    top: 90px;
+    right: 25px;
+    background: #198754;
+    color: white;
+    padding: 14px 22px;
+    border-radius: 10px;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: 0.4s;
+    pointer-events: none;
+    z-index: 999;
+    font-weight: bold;
+}
+
+#toast.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 950px) {
+    .auth-container {
+        grid-template-columns: 1fr;
+    }
+
+    .auth-info {
+        text-align: center;
+        padding: 40px;
+    }
+
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    .board {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .topbar {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+
+    .project-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .auth-info h1 {
+        font-size: 38px;
+    }
+
+    .auth-box {
+        padding: 24px;
+    }
+
+    .content,
+    .sidebar {
+        padding: 18px;
+    }
+}
